@@ -1,6 +1,5 @@
 package net.guides.springboot2.crud.controller;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,9 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import net.guides.springboot2.crud.exception.ResourceNotFoundException;
 import net.guides.springboot2.crud.model.Employee;
-import net.guides.springboot2.crud.repository.EmployeeRepository;
 
 import javax.validation.Valid;
+
 
 /**
  * <DESCRIPTION>.
@@ -29,10 +28,8 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("/api/v1")
 public class EmployeeController {
-    private final EmployeeRepository employeeRepository;
-    private  final EmployeeService employeeService;
-    public EmployeeController(EmployeeRepository employeeRepository, EmployeeService employeeService) {
-        this.employeeRepository = employeeRepository;
+    private final EmployeeService employeeService;
+    public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
 

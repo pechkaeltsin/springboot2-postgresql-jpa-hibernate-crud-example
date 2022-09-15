@@ -3,7 +3,6 @@ package net.guides.springboot2.crud.service;
 import net.guides.springboot2.crud.exception.ResourceNotFoundException;
 import net.guides.springboot2.crud.model.Employee;
 import net.guides.springboot2.crud.repository.EmployeeRepository;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -33,9 +32,8 @@ public class EmployeeService {
 
     public Employee getEmployeeById(Long employeeId) {
 
-        Employee employee = employeeRepository.findById(employeeId)
+        return employeeRepository.findById(employeeId)
                 .orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + employeeId));
-        return employee;
 
     }
 

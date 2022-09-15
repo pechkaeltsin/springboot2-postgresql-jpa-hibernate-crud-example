@@ -1,4 +1,4 @@
-INSERT INTO employee (id, firstName, lastName, emailId) VALUES ('f2564778-75ed-4c13-b56f-b3559dade89f',
+INSERT INTO employee (id, firstName, lastName, emailId) VALUES ('7cd3bc3d-91eb-492b-a200-e752ed50a599',
                                                                 'Peter',
                                                                 'Petrov',
                                                                 'peter@mail.com');
