@@ -1,8 +1,8 @@
 package net.guides.springboot2.crud.model;
 
-import lombok.Data;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import javax.persistence.*;
 
 /**
  * <DESCRIPTION>.
@@ -10,12 +10,21 @@ import lombok.NoArgsConstructor;
  * @author fazylzyanov@reksoft.ru
  */
 
-@Data   //is equivalent to @Getter + @Setter + @RequiredArgsConstructor + @ToString + @EqualsAndHashCode
+@Getter
+@Setter
+@EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table
 public class Employee {
-    private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column (name = "firstname")
     private String firstName;
+    @Column (name = "lastname")
     private String lastName;
+    @Column (name = "emailid")
     private String emailId;
 }

@@ -1,7 +1,7 @@
 CREATE TABLE employee (
-    id UUID NOT NULL,
-    firstName VARCHAR(255),
-    lastName VARCHAR(255),
-    emailId VARCHAR(255),
+    id BIGINT NOT NULL,
+    firstname VARCHAR(255),
+    lastname VARCHAR(255),
+    emailid VARCHAR(255),
     PRIMARY KEY (id)
 );
